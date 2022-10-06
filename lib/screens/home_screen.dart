@@ -7,6 +7,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+         title: Text("Flutter-Beginner"),
         centerTitle: true,
         backgroundColor: Color(0xfb236CB0),
       ),
