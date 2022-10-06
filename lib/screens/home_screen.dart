@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/screens/shared/custom_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,11 +7,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-         title: Text("Flutter-Beginner"),
-        centerTitle: true,
-        backgroundColor: Color(0xfb236CB0),
-      ),
+      appBar: customAppBar("Flutter-Beginner"),
     );
   }
 }
