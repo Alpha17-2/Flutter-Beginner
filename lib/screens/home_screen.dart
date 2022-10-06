@@ -8,6 +8,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: customAppBar("Flutter-Beginner"),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: "About"),
+        BottomNavigationBarItem(icon: Icon(Icons.widgets), label: "widgets"),
+      ]),
     );
   }
 }
