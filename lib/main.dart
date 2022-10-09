@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/screens/home_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:test_app/controller/app_screen_controller.dart';
+import 'package:test_app/screens/app_screen.dart';
 
 // This is the entry point of dart code
 void main() {
@@ -11,9 +13,13 @@ class TestApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => AppScreenController(),
+        )
+      ],
+      child: MaterialApp(home: AppScreen()),
     );
   }
 }
