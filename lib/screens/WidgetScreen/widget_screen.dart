@@ -5,9 +5,24 @@ class WidgetScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      child: Text("Widget Screen"),
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                color: Colors.blue,
+                height: 100,
+                width: 100,
+              ),
+              const Text("Container")
+            ],
+          ),
+          // Add more widgets here 
+        ],
+      ),
     );
   }
 }
